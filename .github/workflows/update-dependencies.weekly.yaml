@@ -4,10 +4,6 @@ on:
     branches:
       - main
 
-
-env:
-  RENOVATE_VERSION: 37.102.0 # renovate: datasource=docker depName=renovate packageName=ghcr.io/renovatebot/renovate
-
 jobs:
   renovate:
     runs-on: ubuntu-latest
@@ -18,7 +14,7 @@ jobs:
         uses: renovatebot/github-action@v39.2.3
         with:
           docker-user: root
-          renovate-version: ${{ env.RENOVATE_VERSION }}-full
+          renovate-version: 37.64.3-full
           configurationFile: .renovaterc.json5
           token: ${{ secrets.RENOVATE_TOKEN }}
         env:
