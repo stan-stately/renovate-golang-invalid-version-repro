@@ -1,7 +1,6 @@
 {
   platform: "github",
   repositories: ["stan-stately/renovate-golang-invalid-version-repro"],
-  gitAuthor: "Renovate Bot",
   branchPrefix: "renovate-action/",
   extends: [":disableDependencyDashboard", ":prImmediately", ":rebaseStalePrs"],
   onboarding: false,
