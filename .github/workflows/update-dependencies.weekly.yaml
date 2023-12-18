@@ -1,0 +1,27 @@
+name: Update dependencies
+on:
+  push:
+    branches:
+      - main
+
+
+env:
+  RENOVATE_VERSION: 37.102.0 # renovate: datasource=docker depName=renovate packageName=ghcr.io/renovatebot/renovate
+
+jobs:
+  renovate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4.1.1
+      - name: Renovate
+        uses: renovatebot/github-action@v39.2.3
+        with:
+          docker-user: root
+          renovate-version: ${{ env.RENOVATE_VERSION }}-full
+          configurationFile: .renovaterc.json5
+          token: ${{ secrets.RENOVATE_TOKEN }}
+        env:
+          LOG_LEVEL: "debug"
+
+

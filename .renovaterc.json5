@@ -1,0 +1,24 @@
+{
+  platform: "github",
+  repositories: ["stan-stately/renovate-golang-invalid-version-repro"],
+  gitAuthor: "Renovate Bot",
+  branchPrefix: "renovate-action/",
+  extends: [":disableDependencyDashboard", ":prImmediately", ":rebaseStalePrs"],
+  onboarding: false,
+  requireConfig: false,
+  printConfig: true,
+  lockFileMaintenance: {
+    enabled: true,
+  },
+  separateMajorMinor: false,
+  automerge: false,
+  automergeType: "pr",
+  prCreation: "immediate",
+  packageRules: [
+    {
+      groupName: "all dependencies",
+      groupSlug: "all",
+      matchPackagePatterns: ["*"],
+    },
+  ],
+}
