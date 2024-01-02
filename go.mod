@@ -1,5 +1,5 @@
 module test
 
-go 1.21.4
+go 1.21.5
 
-require golang.org/x/exp v0.0.0-20231206192017-f3f8817b8deb
+require golang.org/x/exp v0.0.0-20231226003508-02704c960a9b
