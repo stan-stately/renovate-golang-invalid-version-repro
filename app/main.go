@@ -1,9 +1,9 @@
 package main
 
 import (
-	"golang.org/x/exp/slices"
+	"golang.org/x/exp/maps"
 )
 
 func main() {
-	slices.Clone([]int{})
+	maps.Keys(map[string]string{"hello": "world"})
 }
