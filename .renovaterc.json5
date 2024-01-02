@@ -9,15 +9,21 @@
   lockFileMaintenance: {
     enabled: true,
   },
+  vulnerabilityAlerts: {
+    enabled: false,
+  },
   separateMajorMinor: false,
   automerge: false,
   automergeType: "pr",
   prCreation: "immediate",
+  recreateWhen: "always",
+  prHourlyLimit: 0,
   packageRules: [
     {
       groupName: "all dependencies",
       groupSlug: "all",
       matchPackagePatterns: ["*"],
+      enabled: true,
     },
   ],
 }
